@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentropolis.dev/schemas/grokbot-core-v0.1.schema.json",
+  "title": "AGENTROPOLIS GrokBot Core DNA v0.1",
+  "type": "object",
+  "$defs": {
+    "epistemic_status": {"type": "string", "enum": ["CLAIMED","OBSERVED","INSTALLED","CONFIGURED","REACHABLE","RUNNING","AUTHORIZED","VERIFIED"]},
+    "evidenced": {"type": "object", "required": ["status"], "properties": {
+      "status": {"$ref": "#/$defs/epistemic_status"},
+      "evidence_ref": {"type": "string", "description": "Path/URL or AGENTROPOLIS-ONTOLOGY evidence-envelope-v1 id"},
+      "checked_at": {"type": "string", "format": "date-time"},
+      "checked_by": {"type": "string"}}},
+    "tier": {"type": "string", "enum": ["T0_OBSERVE","T1_LOCAL_WRITE","T2_EXTERNAL_DRAFT","T3_EXTERNAL_ACT","T4_FINANCIAL_OR_IRREVERSIBLE"]}
+  },
+  "required": ["identity","mandate","domain_model","structured_memory","knowledge_graph","tool_manifest","specialist_modes","permission_tiers","execution_envelope","evidence_requirements","confidence_model","eval_suite","regression_suite","telemetry","receipts","learning_history"],
+  "properties": {
+    "identity": {"type": "object", "required": ["name","layer","role","status"], "properties": {
+      "name": {"type": "string"}, "emoji": {"type": "string"},
+      "layer": {"enum": ["L1_INTELLIGENCE_GRID","L2_DISTRICT","L3_SPECIALIST"]},
+      "role": {"type": "string"}, "wave": {"type": ["integer","null"]},
+      "agent_id": {"type": ["string","null"]}, "repo": {"type": ["string","null"]},
+      "parent": {"type": ["string","null"], "description": "Senior bot for L3"},
+      "status": {"$ref": "#/$defs/evidenced"},
+      "runtime_binding_ref": {"type": ["string","null"], "description": "ONTOLOGY agent-entity-runtime-binding-v1 id"}}},
+    "mandate": {"type": "object", "required": ["owns","not_owns","answers"], "properties": {
+      "owns": {"type": "array", "items": {"type": "string"}},
+      "not_owns": {"type": "array", "items": {"type": "string"}},
+      "answers": {"type": "string", "description": "The one question this bot is accountable for"}}},
+    "domain_model": {"type": "object", "properties": {"entities": {"type": "array", "items": {"type": "string"}}, "canonical_loop": {"type": "string"}}},
+    "structured_memory": {"type": "object", "properties": {"canon": {"type": "array", "items": {"type": "string"}}, "retention": {"type": "string"}, "owner": {"const": "MEMORIA"}}},
+    "knowledge_graph": {"type": "object", "properties": {"nodes": {"type": "array", "items": {"type": "string"}}, "edges_to_bots": {"type": "array", "items": {"type": "string"}}}},
+    "tool_manifest": {"type": "array", "items": {"type": "object", "required": ["tool","tier","status"], "properties": {
+      "tool": {"type": "string"}, "tier": {"$ref": "#/$defs/tier"}, "status": {"$ref": "#/$defs/epistemic_status"}}}},
+    "specialist_modes": {"type": "array", "items": {"type": "object", "required": ["name","spawn"], "properties": {
+      "name": {"type": "string"}, "spawn": {"enum": ["subagent","mode"]}, "trigger": {"type": "string"}}}},
+    "permission_tiers": {"type": "object", "required": ["default","max_without_neuro"], "properties": {
+      "default": {"$ref": "#/$defs/tier"}, "max_without_neuro": {"$ref": "#/$defs/tier"},
+      "requires_neuro": {"type": "array", "items": {"type": "string"}}}},
+    "execution_envelope": {"type": "object", "properties": {
+      "allowed_surfaces": {"type": "array", "items": {"type": "string"}},
+      "forbidden": {"type": "array", "items": {"type": "string"}},
+      "budget": {"type": "string"}, "corridor_ref": {"const": "district-agent-commons-v1#authority.required_corridor"}}},
+    "evidence_requirements": {"type": "object", "properties": {
+      "min_status_to_report_done": {"$ref": "#/$defs/epistemic_status"},
+      "envelope_schema": {"const": "AGENTROPOLIS-ONTOLOGY/schemas/evidence-envelope-v1.schema.json"}}},
+    "confidence_model": {"type": "object", "properties": {"scale": {"type": "array", "items": {"type": "string"}}, "rule": {"type": "string"}}},
+    "eval_suite": {"type": "array", "items": {"type": "string"}},
+    "regression_suite": {"type": "array", "items": {"type": "string"}},
+    "telemetry": {"type": "object", "properties": {"signals": {"type": "array", "items": {"type": "string"}}, "sink": {"type": "string"}}},
+    "receipts": {"type": "object", "properties": {"format": {"type": "string"}, "sink": {"const": "LEDGER"}, "signed_by": {"type": ["string","null"]}}},
+    "learning_history": {"type": "array", "items": {"type": "object", "properties": {"date": {"type": "string"}, "lesson": {"type": "string"}, "source": {"type": "string"}}}}
+  }
+}
