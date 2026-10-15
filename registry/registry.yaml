@@ -1,0 +1,81 @@
+# GrokBot institutional registry v0.1 (LOCAL DRAFT)
+# status = 8-state epistemic enum. "checked" = evidence actually gathered 2026-10-14 by GrokBotPrime executor.
+# CLAIMED = defined by NEURO in doctrine only; no agent exists.
+# repo: only set where github.com public URL returned 200. A 404 may mean private, so treat it as UNKNOWN, not absent.
+checked_at: "2026-10-14T17:55:00-07:00"
+evidence:
+  agents: /home/box/agent-data/agents/*/profile.json
+  repos: "curl https://github.com/AGENTROPOLIS-CITY-OF-AGENTS/AGENTROPOLIS-<NAME>"
+bots:
+  # ---- Layer 1: Intelligence Grid ----
+  - {id: astra, name: ASTRA, layer: L1, role: Chief Systems Architect, owns: [decomposition, architecture, orchestration, routing], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: omarchy-scout, name: OMARCHY SCOUT, layer: L1, role: Linux + AI Systems Engineer, owns: [machines, linux, drivers, local AI, updates, regression], wave: 1, status: INSTALLED, agent_id: 1aa0403f-6321-4c26-8693-f443d9ae444e, repo: null, checked: true, note: "Profile on disk is Omarchy Linux expert; mandate narrower than L1 role. RUNNING/VERIFIED not tested."}
+  - {id: hermes, name: HERMES, layer: L1, role: Execution / Fleet Engineer, owns: [jobs, subagents, MCP, automation, cron, execution], wave: null, status: CLAIMED, agent_id: null, repo: null, note: "Named as root operator inside Chief of Staff profile (7d13dacc); not its own agent."}
+  - {id: aegis, name: AEGIS, layer: L1, role: Security + Policy Engineer, owns: [permissions, risk tiers, execution envelopes, policy], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: verity, name: VERITY, layer: L1, role: Verification Engineer, owns: [independent testing, evidence, claims, acceptance], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: memoria, name: MEMORIA, layer: L1, role: Knowledge / Context Engineer, owns: [durable memory, context capsules, retrieval, continuity], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: dispatch, name: DISPATCH, layer: L1, role: Routing Engineer, owns: [model routing, agent routing, skill routing, compute routing], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: ledger, name: LEDGER, layer: L1, role: Provenance Engineer, owns: [receipts, lineage, audit trail, attestations], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: forge, name: FORGE, layer: L1, role: Skill / Tool Engineer, owns: [skills, MCPs, tool manifests, capability lifecycle], wave: null, status: CLAIMED, agent_id: null, repo: null, note: "Overlaps OptimusPrime (073222f4) platform mandate (skills/connectors model)."}
+  - {id: atlas, name: ATLAS, layer: L1, role: Spatial Infrastructure Engineer, owns: [World→Region→District→Block→Building mapping], wave: null, status: CLAIMED, agent_id: null, repo: "https://github.com/AGENTROPOLIS-CITY-OF-AGENTS/AGENTROPOLIS-ATLAS", checked: true}
+  # ---- Layer 2: District ----
+  - {id: principal-architect, name: "NEURO-ARCH (proposed; see DECISIONS D1)", layer: L2, role: Principal Systems Architect, owns: [software architecture, distributed systems, agent architecture, ML/LLM systems, APIs, infrastructure], wave: 1, status: CLAIMED, agent_id: null, repo: null, note: "NEURO is the human. Candidate seed: Sr. Engineer (067bb64d), which has an empty profile."}
+  - {id: chaos-code, name: CHAOS CODE, layer: L2, role: Principal Software Engineer, owns: [frontend, backend, APIs, languages, testing, CI/CD, dependencies, code review], wave: 1, status: CLAIMED, agent_id: null, repo: null}
+  - {id: ntru, name: NTRU, layer: L2, role: Cryptography + Trust Engineer, owns: [signatures, identity, wallets, key mgmt, attestations, ZK, encryption, provenance], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: sentinel-6, name: SENTINEL-6, layer: L2, role: Adversarial Assurance Engineer, owns: [threat modeling, exploit research, prompt/tool attacks, privilege escalation, drift analysis], wave: 1, status: CLAIMED, agent_id: null, repo: "https://github.com/AGENTROPOLIS-CITY-OF-AGENTS/AGENTROPOLIS-SENTINEL-6", checked: true, note: "GRIDWATCH (83168186) name suggests overlap; profile empty, so unconfirmed."}
+  - {id: exploit-watch, name: EXPLOIT WATCH, layer: L2, role: Threat Intelligence Engineer, owns: [CVEs, GitHub advisories, malicious packages, supply-chain incidents], wave: 1, status: CLAIMED, agent_id: null, repo: null}
+  - {id: nexus-publica, name: NEXUS PUBLICA, layer: L2, role: Intelligence Analyst, owns: [OSINT, companies, economics, regulation, geopolitics, research], wave: null, status: CLAIMED, agent_id: null, repo: null, note: "Candidate mapping: Market Intelligence agent df50c42e (empty profile)."}
+  - {id: fiscalith, name: FISCALITH, layer: L2, role: Financial Systems Engineer, owns: [payments, nanopayments, accounting, treasury, stablecoins, settlement], wave: null, status: CLAIMED, agent_id: null, repo: "https://github.com/AGENTROPOLIS-CITY-OF-AGENTS/AGENTROPOLIS-FISCALITH", checked: true}
+  - {id: arc, name: ARC, layer: L2, role: Blockchain Infrastructure Engineer, owns: [smart contracts, account abstraction, wallets, tx simulation, gas, agentic commerce], wave: 1, status: CLAIMED, agent_id: null, repo: null}
+  - {id: model-lab, name: MODEL LAB, layer: L2, role: ML/LLM Research Engineer, owns: [model eval, quantization, inference engines, embeddings, RAG, routing cost/perf], wave: 1, status: CLAIMED, agent_id: null, repo: null, note: "Related repo name seen: AGENTROPILIS-Model-Forge (sic), not inspected."}
+  - {id: evals, name: EVALS, layer: L2, role: Evaluation Engineer, owns: [eval suites], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: creator, name: CREATOR, layer: L2, role: Creator Systems, owns: [], wave: null, status: CLAIMED, agent_id: null, repo: null, note: "CONTENT agent (5511b1e8) may be related; profile empty."}
+  - {id: 789-studios, name: 789 STUDIOS, layer: L2, role: Studio / Media, owns: [], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: chaos-rank, name: CHAOS RANK, layer: L2, role: Ranking / Reputation, owns: [], wave: null, status: CLAIMED, agent_id: null, repo: "https://github.com/AGENTROPOLIS-CITY-OF-AGENTS/AGENTROPOLIS-CHAOS-RANK", checked: true}
+  - {id: botbae, name: BOTBAE, layer: L2, role: TBD, owns: [], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: construction, name: CONSTRUCTION, layer: L2, role: Spatial Build Engineer, owns: [World→…→SurfaceTool, spatial manifests, scene composition, deployable environments], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: terra54, name: TERRA54, layer: L2, role: UGC World Engineer, owns: [templates, assets, world packages, creator publishing, portability, validation], wave: null, status: CLAIMED, agent_id: null, repo: null}
+  - {id: holofoil-arcana54, name: HOLOFOIL ARCANA54, layer: L2, role: Game Systems Director, owns: [TCG rules, cards, balancing, lore, economy, tournaments, progression], wave: 1, status: CLAIMED, agent_id: null, repo: "https://github.com/AGENTROPOLIS-CITY-OF-AGENTS/AGENTROPOLIS-HOLOFOIL", checked: true}
+# Roles for EVALS/CREATOR/789 STUDIOS/CHAOS RANK/BOTBAE were cut off in the relayed doctrine ("…1508 characters omitted…"), so their owns lists are left empty on purpose.
+# ---- Layer 3: on-demand specialists (never registered as agents) ----
+specialists:
+  omarchy-scout: [Kernel Engineer, GPU Engineer, Network Engineer, ML Runtime Engineer]
+  chaos-code: [Rust Engineer, Python Engineer, Frontend Engineer, CI Engineer]
+  model-lab: [Inference Engineer, Quantization Engineer, RAG Engineer, Evaluation Scientist]
+  holofoil-arcana54: [Rules Designer, Balance Analyst, Lore Keeper, Economy Simulator, Card Designer, Playtester, Anti-Exploit]
+# ---- Existing non-fleet agents (checked on disk) ----
+other_agents:
+  - {name: OptimusPrime, agent_id: 073222f4-f0cd-418f-b4be-3b51afd3c80a, maps_to: "partial FORGE/DISPATCH (platform twin)"}
+  - {name: AGENTROPOLIS Chief of Staff, agent_id: 7d13dacc-faf0-411b-962a-6bf507d20ec7, maps_to: "Mission Control ops deputy; hosts HERMES role in text"}
+  - {name: GrokBotPrime, agent_id: edbbf62a-ddc2-467b-aabc-2c4fe3d4233c, maps_to: "PM (delegated by NEURO)"}
+  - {name: Sr. Engineer, agent_id: 067bb64d-63fa-4b8a-9d81-40d0016e5997, maps_to: "empty profile; candidate for principal-architect or CHAOS CODE"}
+  - {name: GRIDWATCH, agent_id: 83168186-edfd-4fd4-a7fe-9acfed2d3137, maps_to: "empty profile"}
+  - {name: GrokFleet, agent_id: f25b99af-7375-423d-97f2-21453cd6dabf, maps_to: "empty profile; this is a group (Teammates & groups), not a bot"}
+  - {name: GTM FLEET, agent_id: 0cf3c406-fc43-4aaf-b188-84ffc94a2bec, status: INSTALLED, maps_to: "none; renamed from AGENTROPOLIS-GTM; empty profile"}
+  - {name: CONTENT, agent_id: 5511b1e8-42de-47d5-832b-cd502c2a2e2d, maps_to: "maybe CREATOR"}
+  - {name: VYBE NOIR FLEET, agent_id: de45965c-74ea-4cab-abd3-ca0db246acc4, maps_to: none}
+  - {name: Primer, agent_id: 603d1a92-f14f-4891-bc77-e14992cfa9ef, maps_to: none}
+  - {name: Sage, agent_id: 8768c3fb-7f75-4377-9888-8f173cc5ffbb, maps_to: none}
+  - {name: New Bot, agent_id: 87dd11c4-c6ef-40db-ace9-24de473eed66, maps_to: none}
+  - {name: Market Intelligence, agent_id: df50c42e-cdf9-4ed2-9936-faaa1eca8a9a, status: INSTALLED, maps_to: "candidate NEXUS PUBLICA; empty profile"}
+  - {name: COGNITIVE FLEET, agent_id: 76bd3236-2361-4649-98b8-5e50598815cc, status: INSTALLED, maps_to: "none; empty profile"}
+# ---- GROK cinematic fleet (AGENTROPOLIS-GROK-CINEMATIC-12), added 2026-10-15 ----
+# Status INSTALLED = profile.json on disk + config under /workspace/agentropolis/fleet/. RUNNING/VERIFIED not tested.
+# candidate_mapping = possible overlap with a doctrine role. These are NOT decisions; NEURO decides.
+grok_fleet:
+  checked_at: "2026-10-15T13:40:00-07:00"
+  orchestrator: "Archon54 (profile names HERMES as orchestrator)"
+  agents:
+    - {name: GROK-00 SCOUT, agent_id: 30bfd045-bd8f-4518-9840-d37b1b183022, status: INSTALLED, role: "read-only repo audit (Hermes 3D, spatial world, design system, deployments)", candidate_mapping: "VERITY / EXPLOIT WATCH (read-only audit); name collides with OMARCHY SCOUT"}
+    - {name: GROK-01 DIRECTOR, agent_id: 8a7cd212-858b-4f67-a25c-7441b5c1dc44, status: INSTALLED, role: "cinematic art direction, shot lists, visual bible", candidate_mapping: "789 STUDIOS / CREATOR"}
+    - {name: GROK-02 HUMAN FORGE, agent_id: 17d79272-58f9-4a20-b2ac-668f473dca86, status: INSTALLED, role: "licensed realistic humans, identity-stable rigs", candidate_mapping: "CREATOR (name collides with L1 FORGE, a different role)"}
+    - {name: GROK-03 MOTION, agent_id: 351563e8-9807-476c-9111-7bc67873bc5f, status: INSTALLED, role: "locomotion, gesture, gaze, seating, facial performance", candidate_mapping: "specialist under CONSTRUCTION/789 STUDIOS"}
+    - {name: GROK-04 WORLD ARCHITECT, agent_id: 0ac0e97a-2b38-4188-bd65-849df783ba83, status: INSTALLED, role: "district buildings, floors, offices, traffic, navmesh", candidate_mapping: "CONSTRUCTION (strong overlap); also ATLAS"}
+    - {name: GROK-05 SOCIAL, agent_id: ae44e1b9-bf22-486f-92b3-9c8181bb4073, status: INSTALLED, role: "ambient crowd behaviors, social encounters", candidate_mapping: "specialist under CONSTRUCTION/TERRA54"}
+    - {name: GROK-06 HERMES BRIDGE, agent_id: 56202bb3-b3a3-48ca-9d11-6c8043189af8, status: INSTALLED, role: "Hermes event-to-actor adapter", candidate_mapping: "adapter for HERMES (not HERMES itself)"}
+    - {name: GROK-07 ATG EXPRESSIONS, agent_id: 03c6d530-3be3-4113-8393-fd793c4195bd, status: INSTALLED, role: "ATG emotion/body-language symbols to animations", candidate_mapping: "specialist under GROK-03 MOTION"}
+    - {name: GROK-08 PERFORMANCE, agent_id: c73c7dc3-a2b0-4dd6-b729-f986128ea41a, status: INSTALLED, role: "device tiers, streaming, culling, LOD, asset budgets", candidate_mapping: "specialist under CONSTRUCTION / CHAOS CODE"}
+    - {name: GROK-09 REA LAB, agent_id: c510e3b4-27c3-4d1b-a50d-61309054848d, status: INSTALLED, role: "authorized analysis of owned code and assets", candidate_mapping: "SENTINEL-6 (adversarial analysis)"}
+    - {name: GROK-10 ASSURANCE, agent_id: 5dd1b10d-526a-444c-bc85-7be4a456b594, status: INSTALLED, role: "security, asset provenance/licensing, 54T, fleet PR review", candidate_mapping: "AEGIS (policy) + SENTINEL-6 (security) + LEDGER (provenance); scope spans three doctrine roles"}
+    - {name: GROK-11 INTEGRATOR, agent_id: 87df67d7-9596-4ade-babf-9a767677df9e, status: INSTALLED, role: "coordinate Construction, ARCANA54, Holofoil onto shared system", candidate_mapping: "ASTRA / DISPATCH (orchestration at district scope)"}
+    - {name: Archon54, agent_id: ae159188-60dc-42ed-b6cb-544e8d0421d3, status: INSTALLED, role: "Living City fleet lead (AGENTROPOLIS-GROK-CINEMATIC-12)", candidate_mapping: "ASTRA (fleet orchestration); name close to proposed ARCHON for principal architect (D1)"}
