@@ -1,7 +1,7 @@
-# AGENTROPOLIS-GROKBOT-CORE (local draft v0.1)
+# AGENTROPOLIS-GROKBOT-CORE (draft v0.1)
 
 Shared DNA for every institutional GrokBot in Agentropolis. One core, many senior institutions, no zoo of unrelated prompts.
-Status: LOCAL DRAFT. Not pushed, no agents created. Final authority: NEURO (human, Mission Control).
+Status: DRAFT v0.1, published 2026-10-15 with NEURO approval. No agents created by this repo. Final authority: NEURO (human, Mission Control).
 
 ## Layers
 1. **Intelligence Grid**: city OS (ASTRA, OMARCHY SCOUT, HERMES, AEGIS, VERITY, MEMORIA, DISPATCH, LEDGER, FORGE, ATLAS).
