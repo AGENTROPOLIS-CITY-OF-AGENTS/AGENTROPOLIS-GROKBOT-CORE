@@ -4,7 +4,7 @@ Shared DNA for every institutional GrokBot in Agentropolis. One core, many senio
 Status: DRAFT v0.1, published 2026-10-15 with NEURO approval. No agents created by this repo. Final authority: NEURO (human, Mission Control).
 
 ## Layers
-1. **Intelligence Grid**: city OS (ASTRA, OMARCHY SCOUT, HERMES, AEGIS, VERITY, MEMORIA, DISPATCH, LEDGER, FORGE, ATLAS).
+1. **Intelligence Grid**: city OS (ASTRA, OMARCHY SCOUT, HERMES, AEGIS, APEX54, MEMORIA, DISPATCH, LEDGER, FORGE, ATLAS).
 2. **District bots**: senior domain institutions (principal architect, CHAOS CODE, NTRU, SENTINEL-6, EXPLOIT WATCH, NEXUS PUBLICA, FISCALITH, ARC, MODEL LAB, EVALS, CREATOR, 789 STUDIOS, CHAOS RANK, BOTBAE, CONSTRUCTION, TERRA54, HOLOFOIL ARCANA54).
 3. **Specialists**: these are temporary contexts (GrokBot subagents/modes) spawned by a senior bot. They are never permanent agents.
 
@@ -29,3 +29,7 @@ OBSERVE → CONTEXT LOAD → MODEL → DIAGNOSE → PLAN → RISK → AUTHORIZE 
 ## Doctrine
 **Claimed ≠ Observed ≠ Installed ≠ Configured ≠ Reachable ≠ Running ≠ Authorized ≠ Verified.**
 Every status claim carries one of these eight states and evidence. If a state has no evidence, the claim drops to CLAIMED.
+
+## APEX54 provider boundary
+
+APEX54 is AGENTROPOLIS-owned assurance identity and workflow. VERITY / Muse AI is a replaceable external development-time reviewer, not a required internal service or production authority. Existing implementation, identifiers, historical receipts and audit evidence must be preserved until separately migrated with compatibility tests. APEX54 does not authorize its own execution; AEGIS policy, scoped permissions and explicit human approval remain authoritative. This documentation correction does not establish production readiness.
